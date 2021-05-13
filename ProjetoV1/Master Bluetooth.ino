@@ -8,7 +8,7 @@
 SoftwareSerial HC05(10, 11); // Simula TX e RX nas portas 10 e 11
 
 // Variáveis e Componentes
-int led = 13;          // Defini led na porta 13
+int led = 12;          // Defini led na porta 12
 int buttonState = 1; // Variável para avaliar o status do Botão
 
 void setup()
