@@ -8,7 +8,7 @@
 SoftwareSerial HC05(10, 11); // Simula TX e RX nas portas 10 e 11
 
 // Variáveis e Componentes
-#define led 13 // Define led na porta 13
+#define led 12 // Define led na porta 13
 int  state ;  // Variável para avaliar os comando recebidos
 
 void setup()
