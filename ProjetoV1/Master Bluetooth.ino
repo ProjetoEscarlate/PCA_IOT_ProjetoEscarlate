@@ -8,8 +8,8 @@
 SoftwareSerial HC05(10, 11); // Simula TX e RX nas portas 10 e 11
 
 // Variáveis e Componentes
-int led = 12;          // Defini led na porta 12
-int buttonState = 1; // Variável para avaliar o status do Botão
+int led = 12;          // Defini led na porta 13
+int state = 1; // Variável para avaliar o status do Botão
 
 void setup()
 {
@@ -19,7 +19,7 @@ void setup()
 }
 void loop()
 {
-  if (buttonState == 1)
+  if (HC05 == true)
   { // Se o botão estiver pressionado
     Serial.println("Motor de vibração ON");        // Sinaliza com a palavra "ON"
     HC05.println(2);             // HC05 escreve o valor 2 na serial
