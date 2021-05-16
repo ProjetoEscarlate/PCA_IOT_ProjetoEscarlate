@@ -9,12 +9,16 @@ SoftwareSerial HC05(10, 11); // Simula TX e RX nas portas 10 e 11
 
 // Variáveis e Componentes
 #define led 12 // Define led na porta 13
+#define ledzinho 6
 int  state ;  // Variável para avaliar os comando recebidos
+
 
 void setup()
 {
   pinMode(led, OUTPUT);  // Declara que led como OUTPUT
-  digitalWrite(led, LOW);// Inicia com o led desligado
+  digitalWrite(led, HIGH);// Inicia com o led desligado
+   pinMode(ledzinho, OUTPUT); 
+  digitalWrite(ledzinho, HIGH);
   HC05.begin(38400);     // Taxa de transmissão do Módulo
   Serial.begin(9600);    // Taxa de transmissão na serial
 }
@@ -28,9 +32,8 @@ void loop()
    
     if (state != 1)
     {// Se o valor for diferente de 1
-      digitalWrite(led, HIGH); // Liga o LED
+      digitalWrite(led, LOW); // desliga o motor de vibração 
       delay(10);               // Aguarda 10 ms
     }
   }
-  digitalWrite(led, LOW);     // Desliga o LED 
 }
